@@ -1,0 +1,42 @@
+const { Decimal128 } = require('mongodb')
+const mongoose = require('mongoose')
+
+const ccSchema = new mongoose.Schema({
+    bank: {
+        type: String,
+        required: true
+    },
+    card: {
+        type: String,
+        required: true
+    },
+    type: {
+        type: String,
+        required: true,
+        enum: ['VISA', 'MASTERCARD', 'AMEX', 'DISCOVER']
+    },
+    balance: {
+        type: Number,
+        required: true
+    },
+
+    longTermAPR: {
+        type: Decimal128,
+        required: true,
+    },
+    tempAPR: {
+        type: Decimal128,
+    },
+    tempAPRDate: {
+        type: Date,
+    },
+    balanceTransferAPR: {
+        type: Decimal128,
+    },
+    balanceAmountAvail: {
+        type: Number,
+    }
+})
+
+const Model = mongoose.model('CC', ccSchema);
+module.exports = Model;

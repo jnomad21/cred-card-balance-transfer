@@ -1,3 +1,6 @@
+require('dotenv').config()
+// require('./config/database-connect')
+
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -6,6 +9,7 @@ const methodOverride = require('method-override')
 
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -19,9 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', indexRouter)
 app.use('/', usersRouter)
 
-app.get('/', function (req, res) {
-    res.render('home')
-})
+
 
 
 app.listen(3000, function () {
