@@ -26,12 +26,14 @@ const ccSchema = new mongoose.Schema({
     },
     tempAPR: {
         type: Decimal128,
+        default: 0.00
     },
     tempAPRDate: {
         type: Date,
     },
     balanceTransferAPR: {
         type: Decimal128,
+        default: 0.00
     },
     balanceAmountAvail: {
         type: Number,
