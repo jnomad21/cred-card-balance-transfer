@@ -3,39 +3,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCBT</title>
+    <link rel="stylesheet" href="/stylesheets/new.css">
 </head>
 <body>
 
-    <div>
+    <div id="new-header">
         Add a New Account
     </div>
    
-    <div>
-        <form action="/" method = "POST">
-            <label for="bank">Bank:</label>
-            <input type="text" name="bank">
-            <label for="card">Card:</label>
-            <input type="text" name="card">
-            <label for="type">Type:</label>
-            <select name="type">
-                <option value="VISA">VISA</option>
-                <option value="MASTERCARD">MASTERCARD</option>
-                <option value="AMEX">AMEX</option>
-                <option value="DISCOVER">DISCOVER</option>
-            </select>
-            <label for="balance">Balance $:</label>
-            <input type="number" name="balance">
-            <label for="longTermAPR">Long Term APR %:</label>
-            <input type="number" step="0.01" name="longTermAPR">
-            <label for="tempAPR">Temp APR %:</label>
-            <input type="number" step="0.01" name="tempAPR">
-            <label for="tempAPRDate">Temp APR end date:</label>
-            <input type="date" name="tempAPRDate">
-            <label for="balanceTransferAPR">Balance Transfer APR %:</label>
-            <input type="number" step="0.01" name="balanceTransferAPR">
-            <label for="balanceAmountAvail">Balance Transfer Amount Available $:</label>
-            <input type="number" name="balanceAmountAvail">
-            <input type="submit" value ="Add Account">
+    <div >
+        <form class="new-form" action="/" method = "POST">
+            <div>
+                <label for="bank">Bank:</label>
+                <input type="text" name="bank">
+            </div>
+            <div>
+                <label for="card">Card:</label>
+                <input type="text" name="card">
+            </div>
+            <div>
+                <label for="type">Type:</label>
+                <select name="type">
+                    <option value="VISA">VISA</option>
+                    <option value="MASTERCARD">MASTERCARD</option>
+                    <option value="AMEX">AMEX</option>
+                    <option value="DISCOVER">DISCOVER</option>
+                </select>
+            </div>
+            <div>
+                <label for="balance">Balance $:</label>
+                <input type="number" name="balance">
+            </div>
+            <div>
+                <label for="longTermAPR">Long Term APR %:</label>
+                <input type="number" step="0.01" name="longTermAPR">
+            </div>
+            <div>
+
+                <label for="tempAPR">Temp APR %:</label>
+                <input type="number" step="0.01" name="tempAPR">
+            </div>
+            <div>
+                <label for="tempAPRDate">Temp APR end date:</label>
+                <input type="date" name="tempAPRDate">
+            </div>
+            <div>
+                <label for="balanceTransferAPR">Balance Transfer APR %:</label>
+                <input type="number" step="0.01" name="balanceTransferAPR">
+            </div>
+            <div>
+                <label for="balanceAmountAvail">Balance Transfer Amount Available $:</label>
+                <input type="number" name="balanceAmountAvail">
+            </div>
+    
+            <input type="submit" id="new-submit-btn" value ="Add Account">
 
         </form>
     </div>

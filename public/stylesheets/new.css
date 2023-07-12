@@ -1,0 +1,14 @@
+#new-header{
+    color: green;
+    text-align: center;
+    font-size: 35px;
+}
+.new-form{
+    display: flex;
+    flex-direction: column;
+    column-count: 2;
+
+}
+#new-submit-btn{
+    width: 15vw;
+}
