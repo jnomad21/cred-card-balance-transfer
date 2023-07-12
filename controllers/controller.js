@@ -2,8 +2,16 @@ const Model = require('../models/model')
 
 const controller={
 
-index: (req,res)=>{
-    res.render('home')
+index: async (req,res)=>{
+    try{
+    const cards = await Model.find();
+    res.render('index', {
+    cards: cards
+})
+}catch(err){
+    console.log(err)
+    res.send(err)
+   }
 },
 
 new: (req, res)=>{
@@ -17,6 +25,12 @@ create: async(req, res)=>{
     console.log(err)
     res.send(err)
    }
+},
+show: async(req, res)=>{
+    const card = await Model.findById(req.params.id);
+    res.render('show', {
+        card: card,
+    })
 },
 }
 
