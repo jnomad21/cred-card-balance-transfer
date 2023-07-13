@@ -41,6 +41,25 @@ delete: async(req, res)=>{
         res.send(err)
     }
 },
+edit: async(req, res)=>{
+    try{
+        const card = await Model.findById(req.params.id)
+        res.render('edit',{
+            card: card
+        })
+    }catch(err){
+        res.send(err)
+    }
+
+},
+update: async (req, res)=>{
+    try{
+        await Model.findByIdAndUpdate(req.params.id, req.body)
+        res.redirect(`/accts/${req.params.id}`)
+    }catch(err){
+        res.send(err)
+    }
+},
 }
 
 module.exports = controller
