@@ -4,9 +4,9 @@ const controller = require('../controllers/controller')
 
 router.get('/', controller.index)
 
-router.get('/new', controller.new)
-
 router.post('/', controller.create)
+
+router.get('/new', controller.new)
 
 router.get('/:id', controller.show)
 
