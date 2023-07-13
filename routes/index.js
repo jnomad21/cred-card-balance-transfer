@@ -14,7 +14,7 @@ router.delete('/:id', controller.delete)
 
 router.get('/:id/edit', controller.edit)
 
-router.put(':id', controller.update)
+router.put('/:id', controller.update)
 
 
 module.exports = router;
