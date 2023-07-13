@@ -30,6 +30,7 @@
         <h5>Temp APR end date: <%= new Date(card.tempAPRDate).toLocaleDateString() %></h5>
         <h5>Balance Transfer APR %: <%=card.balanceTranserAPR%></h5>
         <h5>Balance Transfer Amount Available $: <%=card.balanceAmountAvail%></h5>
+        <a href="/<%=card._id%>"><button>Go to Account</button></a>
         </div>
         <% }) %>
     </div>
