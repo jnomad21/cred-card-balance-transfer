@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCBT</title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
 </head>
 <body>
     <div>
@@ -15,17 +16,20 @@
     </div>
     
     
-    <div>
+    <div class = "index-main">
+        
         <%cards.forEach((card)=>{ %>
+        <div class = "index-accts">
         <h5>Bank: <%=card.bank%></h5>
         <h5>Card: <%=card.card%></h5>
         <h5>Type: <%=card.type%></h5>
         <h5>Balance $: <%=card.balance%></h5>
         <h5>Long Term APR %: <%=card.longTermAPR%></h5>
         <h5>Temp APR %: <%=card.tempAPR%></h5>
-        <h5>Temp APR end date: <%=card.tempAPRDate%></h5>
+        <h5>Temp APR end date: <%= new Date(card.tempAPRDate).toLocaleDateString() %></h5>
         <h5>Balance Transfer APR %: <%=card.balanceTranserAPR%></h5>
         <h5>Balance Transfer Amount Available $: <%=card.balanceAmountAvail%></h5>
+        </div>
         <% }) %>
     </div>
 
