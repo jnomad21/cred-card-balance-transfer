@@ -28,9 +28,18 @@ create: async(req, res)=>{
 },
 show: async(req, res)=>{
     const card = await Model.findById(req.params.id);
-    res.render('show', {
-        card: card,
+        res.render('show', {
+            card: card,
     })
+},
+
+delete: async(req, res)=>{
+    try{
+        const deleteAcct = await Model.findByIdAndDelete(req.params.id)
+        res.redirect('/accts')
+    }catch(err){
+        res.send(err)
+    }
 },
 }
 

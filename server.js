@@ -19,8 +19,14 @@ app.use(morgan('dev'))
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use((req, res, next)=>{
+  if(req.method.toLowerCase() === "post"){
+      console.log(req.body)
+  }
+  next();
+})
 
-app.use('/', indexRouter)
+app.use('/accts', indexRouter)
 app.use('/', usersRouter)
 
 

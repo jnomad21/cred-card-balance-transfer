@@ -10,5 +10,7 @@ router.get('/new', controller.new)
 
 router.get('/:id', controller.show)
 
+router.delete('/:id', controller.delete)
+
 
 module.exports = router;

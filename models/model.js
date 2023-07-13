@@ -1,5 +1,5 @@
-const { Decimal128 } = require('mongodb')
 const mongoose = require('mongoose')
+const { Decimal128 } = require('mongodb')
 
 const ccSchema = new mongoose.Schema({
     bank: {

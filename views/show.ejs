@@ -19,7 +19,11 @@
         <h5>Temp APR end date: <%=card.tempAPRDate%></h5>
         <h5>Balance Transfer APR %: <%=card.balanceTranserAPR%></h5>
         <h5>Balance Transfer Amount Available $: <%=card.balanceAmountAvail%></h5>
-
+    <div>
+        <form action="/accts/<%=card._id%>?_method=DELETE" method="POST"> 
+            <input type="submit" value ="Delete this account">
+        </form>
+    </div>
     </div>
 </body>
 </html>
