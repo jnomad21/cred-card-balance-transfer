@@ -8,14 +8,14 @@
 </head>
 <body>
     <%- include('./partials/navbar') %>
-    <h1 id="act-snap-tit">Accounts Snapshot</h1>
+    <h1 class="act-snap-tit">Accounts Snapshot</h1>
     <div>
         <% let totalBalance = 0; %>
         <% cards.forEach((card) => { %>
         <% totalBalance += card.balance; %>
         <% }); %>
 
-<h2>Total Credit Card Balance: <%= totalBalance.toFixed(2) %></h2>
+<h2 class="act-snap-tit">Total Credit Card Balance: <%= totalBalance.toFixed(2) %></h2>
     </div>
     
     
