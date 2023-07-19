@@ -38,10 +38,7 @@ const ccSchema = new mongoose.Schema({
     balanceAmountAvail: {
         type: Number,
     },
-    interestCostPY:{
-        type: Decimal128,
-        default: 0.00
-    }
+   
 })
 
 const Model = mongoose.model('CC', ccSchema);
