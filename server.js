@@ -27,7 +27,7 @@ app.use((req, res, next)=>{
 })
 
 app.use('/accts', indexRouter)
-app.use('/', usersRouter)
+app.use('/users', usersRouter)
 
 
 
