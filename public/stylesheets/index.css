@@ -10,4 +10,6 @@
 }
 button{
     background-color: rgb(15, 206, 79);
+    color: white;
+    padding: 5px;
 }
