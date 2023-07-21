@@ -30,6 +30,7 @@ const ccSchema = new mongoose.Schema({
     },
     tempAPRDate: {
         type: Date,
+        default: Date.now()
     },
     balanceTransferAPR: {
         type: Decimal128,
