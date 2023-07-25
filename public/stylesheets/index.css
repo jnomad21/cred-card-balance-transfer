@@ -17,10 +17,7 @@
     font-size: 1.2em;
 }
 .main-title{
-    background-color: gold;
-    width: fit-content;
-    text-align: center;
-    position: relative;
+    
     
 }
 .index-header{
@@ -30,5 +27,11 @@
 
 }
 .index-balance{
-
+    background-color: gold;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    border-radius: 8%;
+    box-shadow: green 5px 5px 5px;
 }
