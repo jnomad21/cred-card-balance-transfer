@@ -23,15 +23,15 @@
         
         <%cards.forEach((card)=>{ %>
         <div class = "index-accts">
-            <h5>Bank: <%=card.bank%></h5>
-            <h5>Card: <%=card.card%></h5>
-            <h5>Type: <%=card.type%></h5>
-            <h5>Balance $: <%=card.balance%></h5>
-            <h5>Long Term APR %: <%=card.longTermAPR%></h5>
-            <h5>Temp APR %: <%=card.tempAPR%></h5>
-            <h5>Temp APR end date: <%= new Date(card.tempAPRDate).toLocaleDateString() %></h5>
-            <h5>Balance Transfer APR %: <%=card.balanceTranserAPR%></h5>
-            <h5>Balance Transfer Amount Available $: <%=card.balanceAmountAvail%></h5>
+            <h5>Bank: <span class="index-span"><%=card.bank%></span></h5>
+            <h5>Card: <span class="index-span"><%=card.card%></span></h5>
+            <h5>Type: <span class="index-span"><%=card.type%></span></h5>
+            <h5>Balance $: <span class="index-span"><%=card.balance%></span></h5>
+            <h5>Long Term APR %: <span class="index-span"><%=card.longTermAPR%></span></h5>
+            <h5>Temp APR %: <span class="index-span"><%=card.tempAPR%></span></h5>
+            <h5>Temp APR end date: <span class="index-span"><%= new Date(card.tempAPRDate).toLocaleDateString() %></span></h5>
+            <h5>Balance Transfer APR %: <span class="index-span"> <%=card.balanceTranserAPR%></span></h5>
+            <h5>Balance Transfer Amount Available $: <span class="index-span"> <%=card.balanceAmountAvail%></span></h5>
             <br>
             <div class="idx-btns">
                 <h4>Annual Interest Cost $: <%= (card.balance * (card.longTermAPR * 0.01)).toFixed(2) %></h4> 
