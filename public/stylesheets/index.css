@@ -5,10 +5,7 @@
 .index-accts{
     margin: 0 3vw;
 }
-.act-snap-tit{
-    text-align: center;
-    background-color: gold;
-}
+
 .btn{
     background-color: rgb(15, 206, 79);
     color: white;
@@ -18,4 +15,20 @@
 .index-span{
     color: green;
     font-size: 1.2em;
+}
+.main-title{
+    background-color: gold;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    
+}
+.index-header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.index-balance{
+
 }
