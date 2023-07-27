@@ -32,7 +32,15 @@
             <h5>Balance $: <span class="index-span"><%=card.balance%></span></h5>
             <h5>Long Term APR %: <span class="index-span"><%=card.longTermAPR%></span></h5>
             <h5>Temp APR %: <span class="index-span"><%=card.tempAPR%></span></h5>
-            <h5>Temp APR end date: <span class="index-span"><%= new Date(card.tempAPRDate).toLocaleDateString() %></span></h5>
+            <h5>Temp APR end date:
+                <span class="index-span">
+                  <% if (card.tempAPRDate) { %>
+                    <%= new Date(card.tempAPRDate).toLocaleDateString() %>
+                  <% } else { %>
+                    N/A <!-- or any other message you want to display -->
+                  <% } %>
+                </span>
+              </h5>
             <h5>Balance Transfer APR %: <span class="index-span"> <%=card.balanceTranserAPR%></span></h5>
             <h5>Balance Transfer Amount Available $: <span class="index-span"> <%=card.balanceAmountAvail%></span></h5>
             <br>
