@@ -20,7 +20,7 @@ new: (req, res)=>{
 create: async(req, res)=>{
    try{
     const newAcct = await Model.create(req.body);
-    res.redirect(`/${newAcct._id}`)
+    res.redirect(`/accts/${newAcct._id}`)
    }catch(err){
     console.log(err)
     res.send(err)
